@@ -1,6 +1,6 @@
 {
   "name": "kcc",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "./bin/kcc.mjs",
   "bin": {
     "kcc": "./bin/kcc.mjs"
