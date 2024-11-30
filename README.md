@@ -1,4 +1,4 @@
-## kcc.js
+# kcc.js
 
 ## What is it?
 

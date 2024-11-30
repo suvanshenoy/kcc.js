@@ -11,8 +11,10 @@ const processKittyTomlConfig = (kittyDirectoryPath) => {
   if (kittyDirectoryPath !== path.join(os.homedir(), ".config/kitty")) {
     const origKittyDirectoryPath = path.join(os.homedir(), ".config/kitty");
     const failStatus = chalk.redBright("[status:fail]");
+    const hintStatus = chalk.greenBright("[status:hint]");
+    const hintMesg = chalk.cyanBright(`Navigate to kitty directory using 'cd ${origKittyDirectoryPath}'`);
     const failStatusMesg = chalk.cyanBright(`Please use the 'kcc' tool in '${origKittyDirectoryPath}'`);
-    console.error(`${failStatus} ${failStatusMesg}`);
+    console.error(`${failStatus} ${failStatusMesg}\n${hintStatus} ${hintMesg}`);
     process.exit(0);
   }
 
