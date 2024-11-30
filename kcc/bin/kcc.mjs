@@ -15,7 +15,7 @@ program
   .name("kcc")
   .version("0.0.1")
   .description("This tool is a flexible configuration converter for kitty")
-  .option("-f, --file <TomlFilename>", "specify TOML filename");
+  .option("--file <TOML_file_path>", "specify TOML file path");
 
 
 program.parse(process.argv);
