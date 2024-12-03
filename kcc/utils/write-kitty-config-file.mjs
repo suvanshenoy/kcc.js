@@ -1,5 +1,6 @@
 import { writeFileSync } from "node:fs";
 import chalk from "chalk";
+import logStatus from "./helpers/log-status.mjs";
 
 const writeKittyConfigFile = (kittyOutputConfigFileName, kittyParsedTomlData) => {
   const kittyPropertyMap = {
@@ -32,9 +33,7 @@ const writeKittyConfigFile = (kittyOutputConfigFileName, kittyParsedTomlData) =>
 
   try {
     writeFileSync(kittyOutputConfigFileName, kittyConfigFileData, { encoding: 'utf8' });
-    const passStatus = chalk.greenBright("[status:pass]");
-    const passStatusMesg = chalk.cyanBright(`configuration has been written to '${kittyOutputConfigFileName}'`);
-    console.log(`${passStatus} ${passStatusMesg}`);
+    logStatus(["[status:pass]", `configuration has been written to '${kittyOutputConfigFileName}'`]);
   } catch (kittyWriteError) {
     throw kittyWriteError;
   }
