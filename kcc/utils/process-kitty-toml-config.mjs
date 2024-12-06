@@ -5,17 +5,15 @@ import toml from "toml";
 import process from "node:process";
 import writeKittyConfigFile from "./write-kitty-config-file.mjs";
 import chalk from "chalk";
+import logStatus from "./helpers/log-status.mjs";
 
 const processKittyTomlConfig = (kittyDirectoryPath) => {
 
   if (kittyDirectoryPath !== path.join(os.homedir(), ".config/kitty")) {
     const origKittyDirectoryPath = path.join(os.homedir(), ".config/kitty");
-    const failStatus = chalk.redBright("[status:fail]");
-    const hintStatus = chalk.greenBright("[status:hint]");
-    const hintMesg = chalk.cyanBright(`Navigate to kitty directory using 'cd ${origKittyDirectoryPath}'`);
-    const failStatusMesg = chalk.cyanBright(`Please use the 'kcc' tool in '${origKittyDirectoryPath}'`);
-    console.error(`${failStatus} ${failStatusMesg}\n${hintStatus} ${hintMesg}`);
-    process.exit(0);
+    logStatus(["[status:fail]", `Please use the 'kcc' tool in '${origKittyDirectoryPath}'`]);
+    logStatus(["[status:hint]", `Navigate to kitty directory using 'cd ${origKittyDirectoryPath}'`]);
+    process.exit(1);
   }
 
   readdir(kittyDirectoryPath, (kittyReadDirError, kittyFiles) => {
@@ -33,10 +31,9 @@ const processKittyTomlConfig = (kittyDirectoryPath) => {
 
 
     if (!extensionFileArray.filter((file) => !file.startsWith(".")).includes("toml")) {
-      const failStatus = chalk.redBright("[status:fail]");
-      const failStatusMesg = chalk.cyanBright(` 'TOML' file doesnt exist in '${kittyDirectoryPath}'`);
-      console.log(`${failStatus} ${failStatusMesg}`);
-      process.exit(0);
+      logStatus(["[status:fail]", `'TOML' file doesnt exist in '${kittyDirectoryPath}'`]);
+      logStatus(["[status:hint]", "Create a toml file using 'touch [file_name].toml'"]);
+      process.exit(1);
     }
 
     for (const kittyFile of kittyFileArray.filter((file) => !file.startsWith("."))) {

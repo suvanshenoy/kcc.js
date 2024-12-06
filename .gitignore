@@ -1,5 +1,2 @@
 /run-git.sh
 /kcc/node_modules
-/kcc/bun.lockb
-/kcc/package-lock.json
-/kcc/pnpm-lock.yaml

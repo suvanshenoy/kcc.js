@@ -59,7 +59,7 @@ kcc stands for "Kitty Configuration Convert". This tool automates the process of
    Run the following command in the project directory:
 
    ```bash
-   npm link && npm i
+   npm link "kcc"
    ```
 
    #### Using bun
@@ -67,7 +67,7 @@ kcc stands for "Kitty Configuration Convert". This tool automates the process of
    Run the following command in the project directory:
 
    ```bash
-   bun link && bun i
+   bun link "kcc"
    ```
 
    #### Using pnpm
@@ -75,5 +75,15 @@ kcc stands for "Kitty Configuration Convert". This tool automates the process of
    Run the following command in the project directory:
 
    ```bash
-   pnpm link && pnpm i
+   pnpm link "kcc"
    ```
+
+   #### Using yarn
+
+   Run the following command in the project directory:
+
+   ```bash
+   yarn link "kcc"
+   ```
+
+   

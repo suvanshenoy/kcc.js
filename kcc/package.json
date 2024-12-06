@@ -1,20 +1,21 @@
 {
-  "name": "kcc",
-  "version": "1.0.0",
-  "main": "./bin/kcc.mjs",
-  "bin": {
-    "kcc": "./bin/kcc.mjs"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@types/node": "^22.9.0",
-    "chalk": "^5.3.0",
-    "commander": "^12.1.0",
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7",
-    "toml": "^3.0.0"
-  }
+	"name": "kcc",
+	"version": "1.0.0",
+	"bin": {
+		"kcc": "./bin/kcc.mjs"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"@types/node": "^22.9.0",
+		"fs": "^0.0.1-security",
+		"path": "^0.12.7"
+	},
+	"dependencies": {
+		"chalk": "^5.3.0",
+		"commander": "^12.1.0",
+		"toml": "^3.0.0"
+	}
 }
