@@ -1,5 +1,4 @@
 import { writeFileSync } from "node:fs";
-import chalk from "chalk";
 import logStatus from "./helpers/log-status.mjs";
 import kittyConfigProperty from "./settings/properties/kitty-config-properties.mjs";
 
