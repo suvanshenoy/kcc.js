@@ -1,0 +1,26 @@
+const tabBarProperty = {
+	tab_bar_edge: "tab_bar.edge",
+	tab_bar_margin_width: "tab_bar.margin_width",
+	tab_bar_margin_height: "tab_bar.margin_height",
+	tab_bar_style: "tab_bar.style",
+	tab_bar_min_tabs: "tab_bar.min_tabs",
+	tab_switch_strategy: "tab_bar.switch_strategy",
+	tab_fade: "tab_bar.fade",
+	tab_separator: "tab_bar.separator",
+	tab_powerline_style: "tab_bar.powerline_style",
+	tab_bar_align: "tab_bar.align",
+	tab_activity_symbol: "tab_bar.activity_symbol",
+	tab_title_max_length: "tab_bar.title_max_length",
+	tab_title_template: "tab_bar.title_template",
+	active_tab_title_template: "tab_bar.active_tab_title_template",
+	active_tab_foreground: "tab_bar.active_tab_foreground",
+	active_tab_background: "tab_bar.active_tab_background",
+	active_tab_font_style: "tab_bar.active_tab_font_style",
+	inactive_tab_foreground: "tab_bar.inactive_tab_foreground",
+	inactive_tab_background: "tab_bar.inactive_tab_background",
+	inactive_tab_font_style: "tab_bar.inactive_tab_font_style",
+	tab_bar_background: "tab_bar.background",
+	tab_bar_margin_color: "tab_bar.margin_color",
+};
+
+export default tabBarProperty;
