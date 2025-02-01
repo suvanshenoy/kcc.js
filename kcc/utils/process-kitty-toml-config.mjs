@@ -7,8 +7,8 @@ import writeKittyConfigFile from "./write-kitty-config-file.mjs";
 import logStatus from "./helpers/log-status.mjs";
 
 const processKittyTomlConfig = (kittyDirectoryPath) => {
-	if (kittyDirectoryPath !== path.join(os.homedir(), ".config/kitty")) {
-		const origKittyDirectoryPath = path.join(os.homedir(), ".config/kitty");
+	if (kittyDirectoryPath !== path.join(os.homedir(), ".config", "kitty")) {
+		const origKittyDirectoryPath = path.join(os.homedir(), ".config", "kitty");
 		logStatus([
 			"[status:fail]",
 			`Please use the 'kcc' tool in '${origKittyDirectoryPath}'`,

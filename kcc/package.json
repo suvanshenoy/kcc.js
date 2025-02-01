@@ -1,15 +1,16 @@
 {
 	"name": "kcc",
-	"version": "1.0.0",
-	"bin": {
-		"kcc": "./bin/kcc.mjs"
-	},
+	"version": "0.0.1",
 	"keywords": [],
-	"author": "",
+	"author": "suvanshenoy",
 	"license": "ISC",
-	"description": "",
+	"description": "tool to convert any toml file to kitty.conf file",
+	"scripts": {
+		"prod:gen": "bun build --compile ./bin/kcc.mjs --outfile kcc"
+	},
 	"devDependencies": {
 		"@types/node": "^22.9.0",
+		"bun": "^1.2.2",
 		"fs": "^0.0.1-security",
 		"path": "^0.12.7"
 	},
