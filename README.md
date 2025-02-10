@@ -20,14 +20,14 @@ kcc stands for "Kitty Configuration Convert". This tool automates the process of
    family = "JetBrains Mono"
    size = 12.0
 
-   [window]
-   background_opacity = 1.0
+   [color_scheme]
+   background_opacity = 0.6
+
+   [window_layout]
    hide_window_decorations = "yes"
 
-   [colors]
-   background = "#000000"
-   foreground = "#f8f8f2"
-   cursor_color = "#ffb86c"
+   [text_cursor]
+   cursor = "#ff0000"
 
    ```
 
