@@ -52,38 +52,14 @@ kcc stands for "Kitty Configuration Convert". This tool automates the process of
    cd kcc.js/kcc
    ```
 
-1. **Link the package**:
+1. **Generate kcc binary**:
 
    #### Using npm
 
    Run the following command in the project directory:
 
    ```bash
-   npm link "kcc"
+   npx bun prod:gen
    ```
 
-   #### Using bun
 
-   Run the following command in the project directory:
-
-   ```bash
-   bun link "kcc"
-   ```
-
-   #### Using pnpm
-
-   Run the following command in the project directory:
-
-   ```bash
-   pnpm link "kcc"
-   ```
-
-   #### Using yarn
-
-   Run the following command in the project directory:
-
-   ```bash
-   yarn link "kcc"
-   ```
-
-   
