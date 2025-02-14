@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import processKittyTomlConfig from "../utils/process-kitty-toml-config.mjs";
 import process from "node:process";
 import { Command } from "commander";
