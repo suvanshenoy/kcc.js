@@ -6,9 +6,13 @@
 	"license": "ISC",
 	"description": "tool to convert any toml file to kitty.conf file",
 	"scripts": {
-		"prod:gen": "bun build --compile ./bin/kcc.mjs --outfile kcc"
+		"prod:gen": "bun build --compile ./bin/kcc.mjs --outfile kcc",
+		"local:check": "bun local:fmt && bun local:lint",
+		"local:fmt": "bun run biome format --write .",
+		"local:lint": "bun run biome lint --write ."
 	},
 	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
 		"@types/node": "^22.9.0",
 		"bun": "^1.2.2",
 		"fs": "^0.0.1-security",
