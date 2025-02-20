@@ -17,14 +17,14 @@ program
 program.parse(process.argv);
 
 if (!process.argv.slice(2).length) {
-	logStatus(
+	logStatus([
 		"[status:fail]",
 		"No arguments provided. Please pass at least one option",
-	);
-	logStatus(
+	]);
+	logStatus([
 		"[status:hint]",
 		"Try running `kcc --help` or `kcc -h` for usage information.",
-	);
+	]);
 	process.exit(1);
 }
 
@@ -33,10 +33,10 @@ const options = program.opts();
 if (options.file) {
 	const filePath = path.resolve(options.file);
 	if (!existsSync(filePath)) {
-		logStatus(
+		logStatus([
 			"[status:fail]",
 			`File '${options.file}' does not exist in '${process.cwd()}'.`,
-		);
+		]);
 		process.exit(1);
 	}
 	processKittyTomlConfig(process.cwd());
