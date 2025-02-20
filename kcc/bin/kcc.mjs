@@ -23,7 +23,7 @@ if (!process.argv.slice(2).length) {
 	]);
 	logStatus([
 		"[status:hint]",
-		"Try running `kcc --help` or `kcc -h` for usage information.",
+		"Try running `kcc --help` or `kcc -h` for usage information",
 	]);
 	process.exit(1);
 }
@@ -35,7 +35,7 @@ if (options.file) {
 	if (!existsSync(filePath)) {
 		logStatus([
 			"[status:fail]",
-			`File '${options.file}' does not exist in '${process.cwd()}'.`,
+			`File '${options.file}' does not exist in '${process.cwd()}'`,
 		]);
 		process.exit(1);
 	}
