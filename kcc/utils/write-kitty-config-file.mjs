@@ -1,5 +1,5 @@
 import { writeFileSync } from "node:fs";
-import logStatus from "./helpers/log-status.mjs";
+import { logStatus } from "./helpers/log-status.mjs";
 import kittyConfigProperty from "./settings/properties/kitty-config-property.mjs";
 
 const writeKittyConfigFile = (

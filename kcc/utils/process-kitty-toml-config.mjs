@@ -4,7 +4,7 @@ import os from "node:os";
 import toml from "toml";
 import process from "node:process";
 import writeKittyConfigFile from "./write-kitty-config-file.mjs";
-import logStatus from "./helpers/log-status.mjs";
+import { logStatus } from "./helpers/log-status.mjs";
 
 const processKittyTomlConfig = (kittyDirectoryPath) => {
 	if (kittyDirectoryPath !== path.join(os.homedir(), ".config", "kitty")) {
