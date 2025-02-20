@@ -1,6 +1,6 @@
 import chalk from "chalk";
 
-const logStatus = (status = ["[status:pass]", ""]) => {
+export const logStatus = (status = ["[status:pass]", ""]) => {
 	let [statusName, statusMesg] = [undefined, undefined];
 
 	if (status[0] === "[status:pass]" || status[0] === "[status:hint]") {
@@ -15,5 +15,3 @@ const logStatus = (status = ["[status:pass]", ""]) => {
 		console.error(`${statusName} ${statusMesg}`);
 	}
 };
-
-export default logStatus;
