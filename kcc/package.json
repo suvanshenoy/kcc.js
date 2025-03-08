@@ -14,7 +14,6 @@
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@types/node": "^22.9.0",
-		"bun": "^1.2.2",
 		"fs": "^0.0.1-security",
 		"path": "^0.12.7"
 	},
