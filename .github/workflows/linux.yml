@@ -14,22 +14,22 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Set Up
+      - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: "1.2.4"
           
       - name: Print Bun Version
-        run: bun version
+        run: bun --version
         
       - name: Install Dependencies
-        run: bun install
+        run: cd kcc;bun install
 
       - name: Run Check
-        run: bun run local:check
+        run: cd kcc;bun run local:check
 
       - name: Generate Kcc Binary
-        run: bun run prod:gen
+        run: cd kcc;bun run prod:gen
 
       
         
