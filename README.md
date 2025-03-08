@@ -59,7 +59,7 @@ kcc stands for "Kitty Configuration Convert". This tool automates the process of
    Run the following command in the project directory:
 
    ```bash
-   npx bun prod:gen
+   bun prod:gen
    ```
 
 
