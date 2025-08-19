@@ -1,10 +1,10 @@
 import { readdir, readFileSync } from "node:fs";
-import path from "node:path";
 import os from "node:os";
-import toml from "toml";
+import path from "node:path";
 import process from "node:process";
-import writeKittyConfigFile from "./write-kitty-config-file.mjs";
+import toml from "toml";
 import { logStatus } from "./helpers/log-status.mjs";
+import writeKittyConfigFile from "./write-kitty-config-file.mjs";
 
 const processKittyTomlConfig = (kittyDirectoryPath) => {
 	if (kittyDirectoryPath !== path.join(os.homedir(), ".config", "kitty")) {
