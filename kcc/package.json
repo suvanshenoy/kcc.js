@@ -7,11 +7,11 @@
 	"scripts": {
 		"prod:gen": "bun build --compile ./bin/kcc.mjs --outfile kcc",
 		"local:check": "bun local:fmt && bun local:lint",
-		"local:fmt": "bun run biome format --write .",
-		"local:lint": "bun run biome lint --write ."
+		"local:fmt": "biome format --write .",
+		"local:lint": "biome lint --write ."
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.1.4",
+		"@biomejs/biome": "2.1.4",
 		"@types/node": "^22.9.0"
 	},
 	"dependencies": {
