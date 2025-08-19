@@ -1,4 +1,4 @@
-const textCursorProperty = {
+export const textCursorProperty = {
 	cursor: "text_cursor.cursor",
 	cursor_text_color: "text_cursor.text_color",
 	cursor_shape: "text_cursor.shape",
@@ -12,5 +12,3 @@ const textCursorProperty = {
 	cursor_trail_start_threshold: "text_cursor.trail_start_threshold",
 	inactive_cursor_shape: "text_cursor.inactive_shape",
 };
-
-export default textCursorProperty;

@@ -1,4 +1,4 @@
-const mouseProperty = {
+export const mouseProperty = {
 	scrollback_lines: "scrollback.lines",
 	srollback_indicator_opacity: "scrollback.indicator_opacity",
 	scrollback_pager: "scrollback.pager",
@@ -11,5 +11,3 @@ const mouseProperty = {
 	clear_all_mouse_actions: "mouse_actions.clear_all",
 	mouse_map: "mouse_actions.map",
 };
-
-export default mouseProperty;

@@ -3,7 +3,7 @@ import path from "node:path";
 import process from "node:process";
 import { Command } from "commander";
 import { logStatus } from "../utils/helpers/log-status.mjs";
-import processKittyTomlConfig from "../utils/process-kitty-toml-config.mjs";
+import { processKittyTomlConfig } from "../utils/process-kitty-toml-config.mjs";
 
 const program = new Command();
 

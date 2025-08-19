@@ -1,4 +1,4 @@
-const windowLayoutProperty = {
+export const windowLayoutProperty = {
 	remember_window_size: "window_layout.remember_size",
 	initial_window_size: "window_layout.initial_size",
 	initial_window_height: "window_layout.initial_height",
@@ -27,5 +27,3 @@ const windowLayoutProperty = {
 	visual_window_select_characters: "window_layout.visual_window_select_chars",
 	confirm_os_window_close: "window_layout.confirm_os_window_close",
 };
-
-export default windowLayoutProperty;

@@ -1,4 +1,4 @@
-const advancedProperty = {
+export const advancedProperty = {
 	shell: "advanced.shell",
 	editor: "advanced.editor",
 	close_on_child_death: "advanced.close_on_child_death",
@@ -25,5 +25,3 @@ const advancedProperty = {
 	forward_stdio: "advaned.forward_stdio",
 	menu_map: "advaned.menu_map",
 };
-
-export default advancedProperty;

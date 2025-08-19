@@ -1,8 +1,8 @@
 import { writeFileSync } from "node:fs";
 import { logStatus } from "./helpers/log-status.mjs";
-import kittyConfigProperty from "./settings/properties/kitty-config-property.mjs";
+import { kittyConfigProperty } from "./settings/properties/kitty-config-property.mjs";
 
-const writeKittyConfigFile = (
+export const writeKittyConfigFile = (
 	kittyOutputConfigFileName,
 	kittyParsedTomlData,
 ) => {
@@ -40,5 +40,3 @@ const writeKittyConfigFile = (
 		process.exit(1);
 	}
 };
-
-export default writeKittyConfigFile;

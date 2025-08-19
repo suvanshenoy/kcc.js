@@ -1,4 +1,4 @@
-const tabBarProperty = {
+export const tabBarProperty = {
 	tab_bar_edge: "tab_bar.edge",
 	tab_bar_margin_width: "tab_bar.margin_width",
 	tab_bar_margin_height: "tab_bar.margin_height",
@@ -22,5 +22,3 @@ const tabBarProperty = {
 	tab_bar_background: "tab_bar.background",
 	tab_bar_margin_color: "tab_bar.margin_color",
 };
-
-export default tabBarProperty;
