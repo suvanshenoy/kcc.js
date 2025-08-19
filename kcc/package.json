@@ -3,7 +3,6 @@
 	"version": "0.0.1",
 	"keywords": [],
 	"author": "suvanshenoy",
-	"license": "ISC",
 	"description": "tool to convert any toml file to kitty.conf file",
 	"scripts": {
 		"prod:gen": "bun build --compile ./bin/kcc.mjs --outfile kcc",
@@ -13,9 +12,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@types/node": "^22.9.0",
-		"fs": "^0.0.1-security",
-		"path": "^0.12.7"
+		"@types/node": "^22.9.0"
 	},
 	"dependencies": {
 		"chalk": "^5.3.0",
