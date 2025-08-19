@@ -1,4 +1,4 @@
-const fontProperty = {
+export const fontProperty = {
 	font_family: "font.family",
 	bold_font: "font.bold",
 	italic_font: "font.italic",
@@ -19,5 +19,3 @@ const fontProperty = {
 	text_fd_override_thresold: "font.text_fd_override_thresold",
 	letter_spacing: "font.letter_spacing",
 };
-
-export default fontProperty;

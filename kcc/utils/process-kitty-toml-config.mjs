@@ -4,9 +4,13 @@ import path from "node:path";
 import process from "node:process";
 import toml from "toml";
 import { logStatus } from "./helpers/log-status.mjs";
-import writeKittyConfigFile from "./write-kitty-config-file.mjs";
+import { writeKittyConfigFile } from "./write-kitty-config-file.mjs";
 
-const processKittyTomlConfig = (kittyDirectoryPath) => {
+export const processKittyTomlConfig = (kittyDirectoryPath) => {
+	if (typeof kittyDirectoryPath !== "string") {
+		logStatus(["[status:fail]", `${kittyDirectoryPath} is not of type string`]);
+		process.exit(1);
+	}
 	if (kittyDirectoryPath !== path.join(os.homedir(), ".config", "kitty")) {
 		const origKittyDirectoryPath = path.join(os.homedir(), ".config", "kitty");
 		logStatus([
@@ -66,5 +70,3 @@ const processKittyTomlConfig = (kittyDirectoryPath) => {
 		}
 	});
 };
-
-export default processKittyTomlConfig;

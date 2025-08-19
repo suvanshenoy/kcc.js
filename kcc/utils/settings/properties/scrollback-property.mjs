@@ -1,4 +1,4 @@
-const scrollbackProperty = {
+export const scrollbackProperty = {
 	scrollback_lines: "scrollback.lines",
 	srollback_indicator_opacity: "scrollback.indicator_opacity",
 	scrollback_pager: "scrollback.pager",
@@ -8,5 +8,3 @@ const scrollbackProperty = {
 	wheel_scroll_min_lines: "scrollback.wheel_scroll_min_lines",
 	touch_scroll_multiplier: "scrollback.touch_scroll_multiplier",
 };
-
-export default scrollbackProperty;

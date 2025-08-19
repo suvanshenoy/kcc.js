@@ -1,4 +1,4 @@
-const colorSchemeProperty = {
+export const colorSchemeProperty = {
 	foreground: "color_scheme.foreground",
 	background: "color_scheme.background",
 	background_opacity: "color_scheme.background_opacity",
@@ -36,5 +36,3 @@ const colorSchemeProperty = {
 	mark3_foreground: "color_scheme.mark3_foreground",
 	mark3_background: "color_scheme.mark3_background",
 };
-
-export default colorSchemeProperty;

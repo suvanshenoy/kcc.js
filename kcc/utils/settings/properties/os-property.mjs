@@ -1,4 +1,4 @@
-const osProperty = {
+export const osProperty = {
 	wayland_titlebar_color: "wayland.titlebar_color",
 	wayland_enable_ime: "wayland.enable_ime",
 
@@ -16,5 +16,3 @@ const osProperty = {
 
 	linux_display_server: "linux.display_server",
 };
-
-export default osProperty;
