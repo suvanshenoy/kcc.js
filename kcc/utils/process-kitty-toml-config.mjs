@@ -8,7 +8,14 @@ import { writeKittyConfigFile } from "./write-kitty-config-file.mjs";
 
 export const processKittyTomlConfig = (kittyDirectoryPath) => {
 	if (typeof kittyDirectoryPath !== "string") {
-		logStatus(["[status:fail]", `${kittyDirectoryPath} is not of type string`]);
+		logStatus([
+			"[status:fail]",
+			`${kittyDirectoryPath} is not of type 'string'`,
+		]);
+		logStatus([
+			"[status:hint]",
+			`Pass an 'string' instead of '${typeof kittyDirectoryPath}'`,
+		]);
 		process.exit(1);
 	}
 	if (kittyDirectoryPath !== path.join(os.homedir(), ".config", "kitty")) {
@@ -46,7 +53,7 @@ export const processKittyTomlConfig = (kittyDirectoryPath) => {
 		) {
 			logStatus([
 				"[status:fail]",
-				`'TOML' file doesnt exist in '${kittyDirectoryPath}'`,
+				`'TOML' file doesnt exist at '${kittyDirectoryPath}'`,
 			]);
 			logStatus([
 				"[status:hint]",
