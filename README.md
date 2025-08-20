@@ -4,11 +4,6 @@
 
 kcc stands for "Kitty Configuration Convert". This tool automates the process of creating a kitty.conf configuration file. Simply write your desired configuration in a TOML file, and this tool will convert the TOML format into a kitty.conf format.
 
-## Features
-
-- Easy conversion from TOML to `kitty.conf`.
-- Simplifies the management of Kitty terminal configurations.
-
 ## How to Use
 
 1. Write your configuration in a TOML file (ex: `config.toml`) in your kitty directory.
@@ -35,10 +30,6 @@ kcc stands for "Kitty Configuration Convert". This tool automates the process of
 
    ```bash
     cd path/to/kitty; kcc --file .   
-
-                    or
-
-    cd path/to/kitty; kcc --file ./config.toml
    ```
 
 1. Your converted `kitty.conf` file will be ready for use with the Kitty terminal.
