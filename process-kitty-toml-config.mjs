@@ -3,7 +3,7 @@ import os from "node:os";
 import path from "node:path";
 import process from "node:process";
 import toml from "toml";
-import { logStatus } from "./helpers/log-status.mjs";
+import { logStatus } from "./log-status.mjs";
 import { writeKittyConfigFile } from "./write-kitty-config-file.mjs";
 
 export const processKittyTomlConfig = (kittyDirectoryPath) => {
