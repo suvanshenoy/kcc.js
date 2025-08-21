@@ -5,7 +5,7 @@
 	"author": "suvanshenoy",
 	"description": "tool to convert any toml file to kitty.conf file",
 	"scripts": {
-		"prod:gen": "bun build --compile ./bin/kcc.mjs --outfile kcc",
+		"prod:gen": "bun build --compile kcc.mjs --outfile kcc",
 		"local:check": "bun local:fmt && bun local:lint",
 		"local:fmt": "biome format --write .",
 		"local:lint": "biome lint --write ."

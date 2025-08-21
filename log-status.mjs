@@ -1,5 +1,5 @@
-import chalk from "chalk";
 import process from "node:process";
+import chalk from "chalk";
 
 export const logStatus = (status = ["[status:pass]", ""]) => {
 	if (!Array.isArray(status)) {
