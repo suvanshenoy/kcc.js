@@ -1,10 +1,11 @@
-import { readdir, readFileSync } from "node:fs";
+import { readdir, readFileSync, statSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import process from "node:process";
 import toml from "toml";
 import { logStatus } from "./log-status.mjs";
 import { writeKittyConfigFile } from "./write-kitty-config-file.mjs";
+import { checkIfEmpty } from "./validate-config.mjs";
 
 export const processKittyTomlConfig = (kittyDirectoryPath) => {
 	if (typeof kittyDirectoryPath !== "string") {
@@ -61,12 +62,12 @@ export const processKittyTomlConfig = (kittyDirectoryPath) => {
 			]);
 			process.exit(1);
 		}
-
 		for (const kittyFile of kittyFileArray.filter(
 			(file) => !file.startsWith("."),
 		)) {
 			if (kittyFile.split(".").at(-1) === "toml") {
 				const kittyTomlFile = kittyFile;
+				checkIfEmpty(kittyTomlFile);
 				const kittyTomlConfigData = readFileSync(
 					path.join(kittyDirectoryPath, kittyTomlFile),
 					{ encoding: "utf8" },
