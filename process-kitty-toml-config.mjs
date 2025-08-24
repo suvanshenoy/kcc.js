@@ -66,10 +66,10 @@ export const processKittyTomlConfig = (kittyDirectoryPath) => {
 			(file) => !file.startsWith("."),
 		)) {
 			if (kittyFile.split(".").at(-1) === "toml") {
-				const kittyTomlFile = kittyFile;
-				checkIfEmpty(kittyTomlFile);
+				const kittyTomlConfigFile = kittyFile;
+				checkIfEmpty(kittyTomlConfigFile);
 				const kittyTomlConfigData = readFileSync(
-					path.join(kittyDirectoryPath, kittyTomlFile),
+					path.join(kittyDirectoryPath, kittyTomlConfigFile),
 					{ encoding: "utf8" },
 				);
 				const kittyParsedTomlData = toml.parse(kittyTomlConfigData);
