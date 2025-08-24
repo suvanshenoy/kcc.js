@@ -22,9 +22,11 @@ export const checkIfEmpty = (kittyTomlConfigFile) => {
 		!statSync(kittyTomlConfigFile).size ||
 		!kittyTomlConfigData.length ||
 		!Number.isNaN(Number(kittyTomlConfigData)) ||
-		kittyTomldata.toString().includes("#")
+		kittyTomlConfigData.toString().includes("#")
 	) {
 		logStatus(["[status:fail]", `'${kittyTomlConfigFile}' is empty`]);
 		process.exit(1);
 	}
+
+	return kittyTomlConfigData;
 };
