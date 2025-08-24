@@ -29,7 +29,7 @@ export const logStatus = (status = ["[status:pass]", ""]) => {
 		process.exit(1);
 	}
 
-	let [statusName, statusMesg] = [undefined, undefined];
+	let statusName, statusMesg;
 
 	if (status[0] === "[status:pass]" || status[0] === "[status:hint]") {
 		statusName = chalk.greenBright(status[0]);
