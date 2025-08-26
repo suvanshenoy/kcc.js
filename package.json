@@ -11,8 +11,8 @@
 		"local:lint": "biome lint --write ."
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.2.2",
-		"@types/node": "^22.9.0"
+		"@biomejs/biome": "^2.2.2",
+		"@types/node": "^24.3.0"
 	},
 	"dependencies": {
 		"chalk": "^5.6.0",
