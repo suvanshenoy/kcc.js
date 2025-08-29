@@ -1,7 +1,7 @@
 import { readFileSync, statSync } from "node:fs";
 import { logStatus } from "./log-status.mjs";
 
-export const checkIfEmpty = (kittyTomlConfigFile) => {
+export function checkIfEmpty(kittyTomlConfigFile) {
 	if (typeof kittyTomlConfigFile !== "string") {
 		logStatus([
 			"[status:fail]",
@@ -22,11 +22,11 @@ export const checkIfEmpty = (kittyTomlConfigFile) => {
 		!statSync(kittyTomlConfigFile).size ||
 		!kittyTomlConfigData.length ||
 		!Number.isNaN(Number(kittyTomlConfigData)) ||
-		kittyTomlConfigData.toString().includes("#")
+		JSON.stringify(kittyTomlConfigData).includes("#")
 	) {
 		logStatus(["[status:fail]", `'${kittyTomlConfigFile}' is empty`]);
 		process.exit(1);
 	}
 
 	return kittyTomlConfigData;
-};
+}

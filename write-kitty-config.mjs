@@ -2,10 +2,10 @@ import { writeFileSync } from "node:fs";
 import { logStatus } from "./log-status.mjs";
 import { kittyConfigProperty } from "./properties/kitty-config-property.mjs";
 
-export const writeKittyConfigFile = (
-	kittyOutputConfigFileName,
+export function writeKittyConfigFile(
+	kittyOutputConfigFile,
 	kittyParsedTomlData,
-) => {
+) {
 	const kittyData = {};
 	for (const [kittyKey, kittyProp] of Object.entries(kittyConfigProperty)) {
 		let kittyValue = kittyParsedTomlData;
@@ -24,19 +24,19 @@ export const writeKittyConfigFile = (
 	}
 
 	try {
-		writeFileSync(kittyOutputConfigFileName, kittyConfigFileData, {
+		writeFileSync(kittyOutputConfigFile, kittyConfigFileData, {
 			encoding: "utf8",
 		});
 		logStatus([
 			"[status:pass]",
-			`configuration has been written to '${kittyOutputConfigFileName}'`,
+			`configuration has been written to '${kittyOutputConfigFile}'`,
 		]);
 		process.exit(0);
 	} catch (kittyWriteError) {
 		logStatus([
 			"[status:fail]",
-			`failed to write configuration to ${kittyOutputConfigFileName}: ${kittyWriteError.message}`,
+			`failed to write configuration to ${kittyOutputConfigFile}: ${kittyWriteError.message}`,
 		]);
 		process.exit(1);
 	}
-};
+}

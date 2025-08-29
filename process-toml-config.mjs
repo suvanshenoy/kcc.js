@@ -4,10 +4,10 @@ import path from "node:path";
 import process from "node:process";
 import toml from "toml";
 import { logStatus } from "./log-status.mjs";
-import { checkIfEmpty } from "./validate-config.mjs";
-import { writeKittyConfigFile } from "./write-kitty-config-file.mjs";
+import { checkIfEmpty } from "./validate-toml-config.mjs";
+import { writeKittyConfigFile } from "./write-kitty-config.mjs";
 
-export const processKittyTomlConfig = (kittyDirectoryPath) => {
+export function processTomlConfig(kittyDirectoryPath) {
 	if (typeof kittyDirectoryPath !== "string") {
 		logStatus([
 			"[status:fail]",
@@ -33,7 +33,7 @@ export const processKittyTomlConfig = (kittyDirectoryPath) => {
 	}
 
 	readdir(kittyDirectoryPath, (kittyReadDirError, kittyFiles) => {
-		const kittyOutputConfigFileName = path.basename(
+		const kittyOutputConfigFile = path.basename(
 			path.join(kittyDirectoryPath, "kitty.conf"),
 		);
 		if (kittyReadDirError) {
@@ -69,8 +69,8 @@ export const processKittyTomlConfig = (kittyDirectoryPath) => {
 				const kittyTomlConfigFile = kittyFile;
 				const kittyTomlConfigData = checkIfEmpty(kittyTomlConfigFile);
 				const kittyParsedTomlData = toml.parse(kittyTomlConfigData);
-				writeKittyConfigFile(kittyOutputConfigFileName, kittyParsedTomlData);
+				writeKittyConfigFile(kittyOutputConfigFile, kittyParsedTomlData);
 			}
 		}
 	});
-};
+}

@@ -1,7 +1,7 @@
 import process from "node:process";
 import chalk from "chalk";
 
-export const logStatus = (status = ["[status:pass]", ""]) => {
+export function logStatus(status = ["[status:pass]", ""]) {
 	if (!Array.isArray(status)) {
 		logStatus(["[status:fail]", "'status' is not of type 'array'"]);
 		logStatus([
@@ -42,4 +42,4 @@ export const logStatus = (status = ["[status:pass]", ""]) => {
 		statusMesg = chalk.cyanBright(status[1]);
 		console.error(`${statusName} ${statusMesg}`);
 	}
-};
+}

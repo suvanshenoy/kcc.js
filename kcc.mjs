@@ -3,7 +3,7 @@ import path from "node:path";
 import process from "node:process";
 import { Command } from "commander";
 import { logStatus } from "./log-status.mjs";
-import { processKittyTomlConfig } from "./process-kitty-toml-config.mjs";
+import { processTomlConfig } from "./process-toml-config.mjs";
 
 const program = new Command();
 
@@ -38,5 +38,5 @@ if (options.file) {
 		]);
 		process.exit(1);
 	}
-	processKittyTomlConfig(process.cwd());
+	processTomlConfig(process.cwd());
 }
